@@ -61,10 +61,11 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="HappyPathTest.cs" />
     <Compile Include="MathematicianTest.cs" />
     <Compile Include="PingControllerTest.cs" />
+    <Compile Include="PrimeFactorsControllerTestWhenInputIsANumber.cs" />
     <Compile Include="PrimeFactorsControllerTest.cs" />
-    <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

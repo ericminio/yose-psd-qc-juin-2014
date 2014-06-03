@@ -1,21 +1,14 @@
-﻿using System;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 
 namespace YoseTheGame.Controllers
 {
     public class PrimeFactorsController : Controller
     {
+        private readonly HappyPath happyPath = new HappyPath();
+
         public ActionResult Index(string number)
         {
-            int value = Convert.ToInt32(number);
-            var decomposition = Genius.Decompose(value);
-            return Json(new DecompositionResponse
-            {
-                number = value, 
-                decomposition = decomposition
-            }, JsonRequestBehavior.AllowGet);
-        }
-
-        public Genius Genius = new Mathematician();
+            return Json(happyPath.Response(number), JsonRequestBehavior.AllowGet);
+        }               
     }
 }

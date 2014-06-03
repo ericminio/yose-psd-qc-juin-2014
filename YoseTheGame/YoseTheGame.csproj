@@ -114,6 +114,7 @@
   <ItemGroup>
     <Compile Include="Controllers\DecompositionResponse.cs" />
     <Compile Include="Controllers\Genius.cs" />
+    <Compile Include="Controllers\HappyPath.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\Mathematician.cs" />
     <Compile Include="Controllers\PingController.cs" />
