@@ -1,0 +1,3 @@
+﻿language: objective-c
+
+script: ./deploy.sh
