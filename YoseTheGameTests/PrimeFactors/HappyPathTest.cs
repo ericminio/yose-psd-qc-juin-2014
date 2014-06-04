@@ -19,19 +19,19 @@ namespace YoseTheGameTests.PrimeFactors
         [Test]
         public void MatchesIntegers()
         {
-            Assert.That(happyPath.Matches("18"));
+            Assert.That(happyPath.Matching("18"));
         }
 
         [Test]
         public void DoesNotMatchStrings()
         {
-            Assert.False(happyPath.Matches("batman"));
+            Assert.False(happyPath.Matching("batman"));
         }
 
         [Test]
         public void TheResponseContainsTheReceivedNumber()
         {
-            var response = (DecompositionResponse) happyPath.Response("16");
+            var response = (DecompositionResponse) happyPath.RespondTo("16");
 
             Assert.That(response.number, Is.EqualTo(16));
         }
@@ -41,7 +41,7 @@ namespace YoseTheGameTests.PrimeFactors
         {
             var genius = Substitute.For<Genius>();
             happyPath.Genius = genius;
-            happyPath.Response("16");
+            happyPath.RespondTo("16");
 
             genius.Received().Decompose(16);
         }
@@ -53,7 +53,7 @@ namespace YoseTheGameTests.PrimeFactors
             happyPath.Genius = genius;
             var decompositionGivenByGenius = new List<int> { 78, 2, 300 };
             genius.Decompose(4).Returns(decompositionGivenByGenius);
-            var response = (DecompositionResponse) happyPath.Response("4");
+            var response = (DecompositionResponse) happyPath.RespondTo("4");
 
             Assert.That(response.decomposition, Is.EqualTo(decompositionGivenByGenius));
         }

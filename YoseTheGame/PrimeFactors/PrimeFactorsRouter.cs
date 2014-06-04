@@ -13,7 +13,9 @@ namespace YoseTheGame.PrimeFactors
 
         public object Response(string input)
         {
-            return Routes.First(route => route.Matches(input)).Response(input);
+            return Routes.First(route => route.Matching(input)).RespondTo(input);
         }
     }
 }
+
+

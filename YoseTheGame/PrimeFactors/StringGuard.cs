@@ -2,7 +2,7 @@
 {
     public class StringGuard : IAmARoute
     {
-        public object Response(string input)
+        public object RespondTo(string input)
         {
             return new NotANumberError
             {
@@ -11,9 +11,9 @@
             };
         }
 
-        public bool Matches(string input)
+        public bool Matching(string input)
         {
-            return ! new HappyPath().Matches(input);
+            return ! new HappyPath().Matching(input);
         }
     }
 }

@@ -2,7 +2,7 @@ namespace YoseTheGame.PrimeFactors
 {
     public interface IAmARoute
     {
-        object Response(string input);
-        bool Matches(string input);
+        object RespondTo(string input);
+        bool Matching(string input);
     }
 }

@@ -17,19 +17,19 @@ namespace YoseTheGameTests.PrimeFactors
         [Test]
         public void MatchesStrings()
         {
-            Assert.That(stringGuard.Matches("batman"));
+            Assert.That(stringGuard.Matching("batman"));
         }
 
         [Test]
         public void DoesNotMatchIntegers()
         {
-            Assert.False(stringGuard.Matches("23"));
+            Assert.False(stringGuard.Matching("23"));
         }
 
         [Test]
         public void TheResponseContainsTheReceivedInput()
         {
-            var response = (NotANumberError) stringGuard.Response("ironman");
+            var response = (NotANumberError) stringGuard.RespondTo("ironman");
 
             Assert.That(response.number, Is.EqualTo("ironman"));
         }
@@ -37,7 +37,7 @@ namespace YoseTheGameTests.PrimeFactors
         [Test]
         public void TheResponseContainsTheSpecificError()
         {
-            var response = (NotANumberError) stringGuard.Response("ironman");
+            var response = (NotANumberError) stringGuard.RespondTo("ironman");
 
             Assert.That(response.error, Is.EqualTo("not a number"));
         }

@@ -1,6 +1,4 @@
-﻿using System.Web.Mvc;
-using NUnit.Framework;
-using YoseTheGame.Controllers;
+﻿using NUnit.Framework;
 using YoseTheGame.PrimeFactors;
 
 namespace YoseTheGameTests.PrimeFactors

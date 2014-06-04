@@ -8,8 +8,8 @@ namespace YoseTheGameTests.PrimeFactors
         public static IAmARoute MatchingAnyInputAndResponding(string answer)
         {
             var stub = Substitute.For<IAmARoute>();
-            stub.Matches(Arg.Any<string>()).Returns(true);
-            stub.Response(Arg.Any<string>()).Returns(answer);
+            stub.Matching(Arg.Any<string>()).Returns(true);
+            stub.RespondTo(Arg.Any<string>()).Returns(answer);
 
             return stub;
         }
@@ -17,7 +17,7 @@ namespace YoseTheGameTests.PrimeFactors
         public static IAmARoute NotMatchingAnyInput()
         {
             var stub = Substitute.For<IAmARoute>();
-            stub.Matches(Arg.Any<string>()).Returns(false);
+            stub.Matching(Arg.Any<string>()).Returns(false);
 
             return stub;
         }

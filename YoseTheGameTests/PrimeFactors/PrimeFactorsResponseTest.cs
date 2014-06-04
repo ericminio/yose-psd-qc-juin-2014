@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using NSubstitute;
 using NUnit.Framework;
 using YoseTheGame.PrimeFactors;
 
@@ -39,7 +38,7 @@ namespace YoseTheGameTests.PrimeFactors
         {
             int index = 0;
             Assert.That(router.Routes[index++], Is.InstanceOf<StringGuard>());
-            Assert.That(router.Routes[index++], Is.InstanceOf<HappyPath>());
+            Assert.That(router.Routes[index], Is.InstanceOf<HappyPath>());
         }
 
     }
