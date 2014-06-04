@@ -5,7 +5,7 @@ using YoseTheGame.Controllers;
 namespace YoseTheGameTests
 {
     [TestFixture]
-    class PrimeFactorsControllerTestWhenInputIsAString
+    class PrimeFactorsResponseTestWhenInputIsAString
     {
         private PrimeFactorsController controller;
 

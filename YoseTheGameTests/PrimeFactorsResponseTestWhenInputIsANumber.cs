@@ -1,12 +1,11 @@
-﻿using System.Collections.Generic;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using NUnit.Framework;
 using YoseTheGame.Controllers;
 
 namespace YoseTheGameTests
 {
     [TestFixture]
-    public class PrimeFactorsControllerTestWhenInputIsANumber
+    public class PrimeFactorsResponseTestWhenInputIsANumber
     {
         private PrimeFactorsController controller;
 

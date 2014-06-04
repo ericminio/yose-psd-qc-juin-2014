@@ -64,9 +64,9 @@
     <Compile Include="HappyPathTest.cs" />
     <Compile Include="MathematicianTest.cs" />
     <Compile Include="PingControllerTest.cs" />
-    <Compile Include="PrimeFactorsControllerTestWhenInputIsANumber.cs" />
+    <Compile Include="PrimeFactorsResponseTestWhenInputIsANumber.cs" />
     <Compile Include="PrimeFactorsControllerTest.cs" />
-    <Compile Include="PrimeFactorsControllerTestWhenInputIsAString.cs" />
+    <Compile Include="PrimeFactorsResponseTestWhenInputIsAString.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StringGuardTest.cs" />
   </ItemGroup>
