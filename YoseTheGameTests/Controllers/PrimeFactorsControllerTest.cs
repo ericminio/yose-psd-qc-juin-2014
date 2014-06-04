@@ -1,8 +1,9 @@
 ﻿using System.Web.Mvc;
 using NUnit.Framework;
 using YoseTheGame.Controllers;
+using YoseTheGame.PrimeFactors;
 
-namespace YoseTheGameTests
+namespace YoseTheGameTests.Controllers
 {
     [TestFixture]
     public class PrimeFactorsControllerTest
@@ -10,7 +11,7 @@ namespace YoseTheGameTests
         private PrimeFactorsController controller;
 
         [SetUp]
-        public void ThisController()
+        public void TheReturnedResponse()
         {
             controller = new PrimeFactorsController();
         }

@@ -112,15 +112,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controllers\DecompositionResponse.cs" />
-    <Compile Include="Controllers\Genius.cs" />
-    <Compile Include="Controllers\HappyPath.cs" />
+    <Compile Include="PrimeFactors\PrimeFactorsRouter.cs" />
+    <Compile Include="PrimeFactors\DecompositionResponse.cs" />
+    <Compile Include="PrimeFactors\Genius.cs" />
+    <Compile Include="PrimeFactors\HappyPath.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\Mathematician.cs" />
-    <Compile Include="Controllers\NotANumberError.cs" />
+    <Compile Include="PrimeFactors\Mathematician.cs" />
+    <Compile Include="PrimeFactors\NotANumberError.cs" />
     <Compile Include="Controllers\PingController.cs" />
     <Compile Include="Controllers\PrimeFactorsController.cs" />
-    <Compile Include="Controllers\StringGuard.cs" />
+    <Compile Include="PrimeFactors\StringGuard.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

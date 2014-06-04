@@ -1,10 +1,8 @@
-﻿using System;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using NUnit.Framework;
 using YoseTheGame.Controllers;
 
-
-namespace YoseTheGameTests
+namespace YoseTheGameTests.Controllers
 {
     [TestFixture]
     public class PingControllerTest

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace YoseTheGame.Controllers
+namespace YoseTheGame.PrimeFactors
 {
     public class Mathematician : Genius
     {

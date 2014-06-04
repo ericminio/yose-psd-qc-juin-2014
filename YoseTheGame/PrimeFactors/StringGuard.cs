@@ -1,4 +1,4 @@
-﻿namespace YoseTheGame.Controllers
+﻿namespace YoseTheGame.PrimeFactors
 {
     public class StringGuard
     {

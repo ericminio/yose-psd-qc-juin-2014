@@ -1,7 +1,7 @@
 using System;
-using System.Collections.Generic;
+using YoseTheGame.Controllers;
 
-namespace YoseTheGame.Controllers
+namespace YoseTheGame.PrimeFactors
 {
     public class HappyPath
     {

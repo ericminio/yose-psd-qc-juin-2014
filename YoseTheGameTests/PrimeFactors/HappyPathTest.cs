@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using NSubstitute;
 using NUnit.Framework;
-using YoseTheGame.Controllers;
+using YoseTheGame.PrimeFactors;
 
-namespace YoseTheGameTests
+namespace YoseTheGameTests.PrimeFactors
 {
     [TestFixture]
     class HappyPathTest
