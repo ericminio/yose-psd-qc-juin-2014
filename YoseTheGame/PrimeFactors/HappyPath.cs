@@ -1,5 +1,4 @@
 using System;
-using YoseTheGame.Controllers;
 
 namespace YoseTheGame.PrimeFactors
 {
