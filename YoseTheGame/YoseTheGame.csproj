@@ -112,6 +112,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PrimeFactors\IAmARoute.cs" />
     <Compile Include="PrimeFactors\PrimeFactorsRouter.cs" />
     <Compile Include="PrimeFactors\DecompositionResponse.cs" />
     <Compile Include="PrimeFactors\Genius.cs" />

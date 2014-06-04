@@ -1,21 +1,19 @@
+using System.Collections.Generic;
+using System.Linq;
+
 namespace YoseTheGame.PrimeFactors
 {
     public class PrimeFactorsRouter
     {
-        private readonly HappyPath happyPath = new HappyPath();
-        private readonly StringGuard stringGuard = new StringGuard();
-        
-        public object Response(string number)
+        public List<IAmARoute> Routes = new List<IAmARoute>
         {
-            int any;
-            if (int.TryParse(number, out any))
-            {
-                return happyPath.Response(number);
-            }
-            else
-            {
-                return stringGuard.Response(number);
-            }
+            new StringGuard(),
+            new HappyPath(),
+        };
+
+        public object Response(string input)
+        {
+            return Routes.First(route => route.Matches(input)).Response(input);
         }
     }
 }

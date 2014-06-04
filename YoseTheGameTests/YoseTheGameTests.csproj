@@ -61,9 +61,11 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="PrimeFactors\ARoute.cs" />
     <Compile Include="PrimeFactors\HappyPathTest.cs" />
     <Compile Include="PrimeFactors\MathematicianTest.cs" />
     <Compile Include="Controllers\PingControllerTest.cs" />
+    <Compile Include="PrimeFactors\PrimeFactorsResponseTest.cs" />
     <Compile Include="PrimeFactors\PrimeFactorsResponseTestWhenInputIsANumber.cs" />
     <Compile Include="Controllers\PrimeFactorsControllerTest.cs" />
     <Compile Include="PrimeFactors\PrimeFactorsResponseTestWhenInputIsAString.cs" />

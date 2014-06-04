@@ -11,15 +11,27 @@ namespace YoseTheGameTests.PrimeFactors
         private HappyPath happyPath;
 
         [SetUp]
-        public void ThisPath()
+        public void ThisRoute()
         {
             happyPath = new HappyPath();
         }
 
         [Test]
+        public void MatchesIntegers()
+        {
+            Assert.That(happyPath.Matches("18"));
+        }
+
+        [Test]
+        public void DoesNotMatchStrings()
+        {
+            Assert.False(happyPath.Matches("batman"));
+        }
+
+        [Test]
         public void TheResponseContainsTheReceivedNumber()
         {
-            var response = happyPath.Response("16");
+            var response = (DecompositionResponse) happyPath.Response("16");
 
             Assert.That(response.number, Is.EqualTo(16));
         }
@@ -41,7 +53,7 @@ namespace YoseTheGameTests.PrimeFactors
             happyPath.Genius = genius;
             var decompositionGivenByGenius = new List<int> { 78, 2, 300 };
             genius.Decompose(4).Returns(decompositionGivenByGenius);
-            var response = happyPath.Response("4");
+            var response = (DecompositionResponse) happyPath.Response("4");
 
             Assert.That(response.decomposition, Is.EqualTo(decompositionGivenByGenius));
         }

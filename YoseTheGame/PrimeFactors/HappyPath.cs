@@ -2,11 +2,11 @@ using System;
 
 namespace YoseTheGame.PrimeFactors
 {
-    public class HappyPath
+    public class HappyPath : IAmARoute
     {
         public Genius Genius = new Mathematician();
 
-        public DecompositionResponse Response(string input)
+        public object Response(string input)
         {
             int number = Convert.ToInt32(input);
             var decomposition = Genius.Decompose(number);
@@ -16,6 +16,12 @@ namespace YoseTheGame.PrimeFactors
                 number = number, 
                 decomposition = decomposition
             };
+        }
+
+        public bool Matches(string input)
+        {
+            int number;
+            return Int32.TryParse(input, out number);
         }
     }
 }
