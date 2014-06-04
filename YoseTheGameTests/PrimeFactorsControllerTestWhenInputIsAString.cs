@@ -1,12 +1,11 @@
-﻿using System.Collections.Generic;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using NUnit.Framework;
 using YoseTheGame.Controllers;
 
 namespace YoseTheGameTests
 {
     [TestFixture]
-    public class PrimeFactorsControllerTestWhenInputIsANumber
+    class PrimeFactorsControllerTestWhenInputIsAString
     {
         private PrimeFactorsController controller;
 
@@ -19,14 +18,13 @@ namespace YoseTheGameTests
         [Test]
         public void ReturnsJson()
         {
-            Assert.That(controller.Index("32"), Is.InstanceOf<JsonResult>());
+            Assert.That(controller.Index("batman"), Is.InstanceOf<JsonResult>());
         }
 
         [Test]
-        public void ReturnsADecompositionResponse()
+        public void ReturnsANotANumberError()
         {
-            Assert.That(((JsonResult)controller.Index("8")).Data, Is.InstanceOf<DecompositionResponse>());
+            Assert.That(((JsonResult)controller.Index("ironman")).Data, Is.InstanceOf<NotANumberError>());
         }
-        
     }
 }

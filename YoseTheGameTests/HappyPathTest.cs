@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Web.Mvc;
 using NSubstitute;
 using NUnit.Framework;
 using YoseTheGame.Controllers;
@@ -9,12 +8,20 @@ namespace YoseTheGameTests
     [TestFixture]
     class HappyPathTest
     {
-        HappyPath happyPath;
+        private HappyPath happyPath;
 
         [SetUp]
         public void ThisPath()
         {
             happyPath = new HappyPath();
+        }
+
+        [Test]
+        public void TheResponseContainsTheReceivedNumber()
+        {
+            var response = happyPath.Response("16");
+
+            Assert.That(response.number, Is.EqualTo(16));
         }
 
         [Test]
